@@ -1,6 +1,6 @@
 # Data Structure and Algorithm Java Implementation Edition
 
-### <a href='readme.md'>中文</a> 英文
+#### <a href='readme.md'>中文版本</a> | 英文版本
 
 ## projectInstruction
 > The supporting textbook for this project is Mr. Cheng Jie's "Dahua Data Structure". The C language is used as an example in the book, and I will rewrite and test it in Java.
