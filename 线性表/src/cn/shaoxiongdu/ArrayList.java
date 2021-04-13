@@ -41,16 +41,29 @@ public class ArrayList implements List{
         elementData = new Object[size];
     }
 
+
+    public void print() {
+        System.out.println("==================================");
+        for (int i = 1; i <= this.size(); i++) {
+            try {
+                System.out.println(this.get(i));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("==================================");
+    }
+
     /**
      * 判断是否为空
      * @return
      */
-    @Override
+
     public boolean isEmpty() {
         return size==0;
     }
 
-    @Override
+
     public void clear() {
         for (int i = 0; i < elementData.length; i++) {
             elementData[i] = null;
@@ -64,7 +77,7 @@ public class ArrayList implements List{
      * @return
      * @throws Exception 若下标<0或者大于线性表的长度 抛出此异常
      */
-    @Override
+
     public Object get(int index) throws Exception {
         if(index < 0 || index > elementData.length) throw new Exception("下标错误");
         return elementData[index-1];
@@ -75,7 +88,7 @@ public class ArrayList implements List{
      * @param object
      * @return 如果线性表中没有,则返回-1
      */
-    @Override
+
     public int findIndexByObject(Object object) {
         if(object == null) return -1;
         for (int i = 0; i < elementData.length; i++) {
@@ -91,7 +104,7 @@ public class ArrayList implements List{
      * @return
      * @throws Exception 如果下标小于0或者大于容量则抛出此异常
      */
-    @Override
+
     public Object insert(int index, Object object) throws Exception {
 
         if( index < 0 || index > elementData.length) throw new Exception("下标错误!");
@@ -109,7 +122,7 @@ public class ArrayList implements List{
      * @param object
      * @return 返回添加好的元素
      */
-    @Override
+
     public Object insert(Object object) throws Exception {
         //如果容量已满 则自动扩容
         if(size == elementData.length){
@@ -126,7 +139,7 @@ public class ArrayList implements List{
      * @return
      * @throws Exception 如果下标小于0或者大于元素个数则抛出此异常
      */
-    @Override
+
     public Object delete(int index) throws Exception {
         if( index < 0 || index > size) throw new Exception("下标错误!");
         Object object = elementData[index-1];
@@ -139,7 +152,7 @@ public class ArrayList implements List{
 
 
 
-    @Override
+
     public int size() {
         return size;
     }

@@ -8,6 +8,8 @@ import java.util.ArrayList;
  */
 public interface List {
 
+    public void print();
+
     /**
      * 判断线性表是否为空
      * @return
