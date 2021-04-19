@@ -108,13 +108,13 @@ public class LinkedStack implements Stack{
 
     /**
      * 获取顶层元素
-     * @return
-     * @throws Exception 若栈被销毁或者栈为空,则抛出此异常
+     * @return 若栈为空 则返回-1
+     * @throws Exception 若栈被销毁,则抛出此异常
      */
     @Override
     public Object getTop() throws Exception {
         if(headNode == null) throw new Exception("栈被销毁");
-        if(size == 0) throw new Exception("栈为空");
+        if(size == 0) return -1;
         Node temp = headNode;
         while (temp.next!=null){
             temp = temp.next;
@@ -135,13 +135,13 @@ public class LinkedStack implements Stack{
 
     /**
      * 弹出最顶层的元素
-     * @return
-     * @throws Exception 若栈被销毁或者栈为空,则抛出此异常
+     * @return 若栈为空 则返回-1
+     * @throws Exception 若栈被销毁,则抛出此异常
      */
     @Override
     public Object pop() throws Exception {
         if(headNode == null) throw new Exception("栈被销毁");
-        if(size == 0) throw new Exception("栈为空");
+        if(size == 0) return -1;
         Node temp = headNode;
 
         while (temp.next.next!=null){
