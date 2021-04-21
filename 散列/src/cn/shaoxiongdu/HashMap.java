@@ -11,7 +11,7 @@ import java.util.Objects;
 public class HashMap implements Serializable {
 
     /**
-     * HashMap内部节点类
+     * HashMap  内部节点类
      */
     private class Node{
 
