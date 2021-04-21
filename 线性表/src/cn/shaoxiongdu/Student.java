@@ -29,7 +29,7 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age);
+        return age % 10;
     }
 
     @Override
