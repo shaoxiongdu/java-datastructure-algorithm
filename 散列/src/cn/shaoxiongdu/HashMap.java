@@ -1,12 +1,12 @@
 package cn.shaoxiongdu;
 
 import java.io.Serializable;
-import java.util.Map;
 import java.util.Objects;
 
 /**
  * ClassName : HashMap
  * (c)CopyRight 2021/4/21 All rights reserved to ShaoxiongDu<shaoxiongdu.dev@gmail.com>
+ * @author Shaoxiong
  */
 public class HashMap implements Serializable {
 
@@ -37,8 +37,12 @@ public class HashMap implements Serializable {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             Node node = (Node) o;
             return Objects.equals(key, node.key) && Objects.equals(value, node.value);
         }
@@ -144,12 +148,18 @@ public class HashMap implements Serializable {
      * @throws Exception 如果参数不合法,抛出此异常
      */
     public HashMap(int initialCapacity,float loadFactor) throws Exception {
-        if( initialCapacity <= 0 ) throw new Exception("初始化容量异常:" + initialCapacity);
-        if(loadFactor <= 0 || loadFactor >= 1 ) throw new Exception("初始化负载因子异常" + loadFactor);
+        if( initialCapacity <= 0 ) {
+            throw new Exception("初始化容量异常:" + initialCapacity);
+        }
+        if(loadFactor <= 0 || loadFactor >= 1 ) {
+            throw new Exception("初始化负载因子异常" + loadFactor);
+        }
         /**
          * 若初始化容量大于默认的最大容量 则置为最大容量
          */
-        if(initialCapacity >= MAX_CAPACITY) initialCapacity = MAX_CAPACITY;
+        if(initialCapacity >= MAX_CAPACITY) {
+            initialCapacity = MAX_CAPACITY;
+        }
         this.capacity = initialCapacity;
         this.loadFactor = loadFactor;
         table = new Node[initialCapacity];
@@ -239,7 +249,9 @@ public class HashMap implements Serializable {
 
         int index =  getIndexForHash(hash);
 
-        if(table[index] == null) return null;
+        if(table[index] == null) {
+            return null;
+        }
 
         Node temp = table[index];
 
@@ -263,7 +275,9 @@ public class HashMap implements Serializable {
 
         int index =  getIndexForHash(hash);
 
-        if(table[index] == null) return null;
+        if(table[index] == null) {
+            return null;
+        }
 
         Node temp = table[index];
 
