@@ -1,6 +1,6 @@
 # DataStructureForJava
 
-![数据结构与算法Java实现版](image/数据结构与算法Java实现版.jpg)
+![数据结构与算法Java实现版](https://gitee.com/ShaoxiongDu/imageBed/raw/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95Java%E5%AE%9E%E7%8E%B0%E7%89%88.jpg)
 
 
 ## 项目说明
@@ -47,8 +47,7 @@
 >    - 希尔排序
 >    - 堆排序
 >    - 归并排序
->    - 快速排序
->
+>    - ~~快速排序~~ √
 
 ## 参与贡献
 1. Fork 本仓库
