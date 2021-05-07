@@ -1,18 +1,16 @@
 package cn.shaoxiongdu.冒泡排序;
 
 import cn.shaoxiongdu.RandomIntArray;
-import cn.shaoxiongdu.Sortable;
 
 /**
  * ClassName : Pop
  * (c)CopyRight 2021/4/22 All rights reserved to ShaoxiongDu<shaoxiongdu.dev@gmail.com>
  *     冒泡排序
  */
-public class PopSort implements Sortable {
+public class PopSort{
 
 
-    @Override
-    public void sort(int[] numbers) {
+    public static void sort(int[] numbers) {
 
         for (int i = 0; i < numbers.length - 1; i++) {
 
@@ -38,7 +36,7 @@ public class PopSort implements Sortable {
 
         randomIntArray.printArray();
 
-        new PopSort().sort(randomIntArray.getNumbers());
+        sort(randomIntArray.getNumbers());
 
         randomIntArray.printArray();
     }

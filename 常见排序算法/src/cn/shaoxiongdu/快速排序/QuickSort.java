@@ -12,7 +12,7 @@ public class QuickSort{
      * 快速排序
      * @param number 需要排序的序列
      */
-    public void sort(int[] number){
+    public static void sort(int[] number){
 
         //递归调用快排
         quickSort(number,0, number.length-1);
@@ -25,7 +25,7 @@ public class QuickSort{
      * @param begin 开始部分
      * @param end 结束部分
      */
-    public void quickSort(int [] number, int begin, int end){
+    public static void quickSort(int [] number, int begin, int end){
 
         //当左右下标重合时，结束递归
         if(begin >= end) return;
@@ -84,7 +84,7 @@ public class QuickSort{
         //输入随机数字序列
         randomIntArray.printArray(); //86	48	39	41	2	97	97	22	77	5	86	66	63	34	59	3	53	87	94	92
         //调用快速排序
-        new QuickSort().sort(randomIntArray.getNumbers());
+        sort(randomIntArray.getNumbers());
         //测试结果
         randomIntArray.printArray(); //2	3	5	22	34	39	41	48	53	59	63	66	77	86	86	87	92	94	97	97
 
