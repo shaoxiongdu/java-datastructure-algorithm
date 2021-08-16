@@ -60,10 +60,3 @@
 ## 说明
 
 目前,项目并没有完成,仍在继续更新!
-
-## 支持我
-
-> ### 目前为止，我还没毕业，大三。正在为早餐发愁
-> ### 如果此项目对您的学习有帮助的话
-> ### 欢迎扫码请我吃一顿早餐，我将万分感谢！
-![wxPraiseQR](https://gitee.com/ShaoxiongDu/imageBed/raw/master/wxPraiseQR.png)
